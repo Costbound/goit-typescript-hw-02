@@ -1,7 +1,14 @@
-import css from './LoadMoreBtn.module.css'
+import css from "./LoadMoreBtn.module.css";
 
-export default function LoadMoreBtn({onClick, children}) {
-    return (
-        <button className={css.button} onClick={onClick}>{children}</button>
-    )
+type Props = {
+  onClick: () => void;
+  children: string;
+};
+
+export default function LoadMoreBtn({ onClick, children }: Props) {
+  return (
+    <button className={css.button} onClick={onClick}>
+      {children}
+    </button>
+  );
 }
